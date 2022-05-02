@@ -1,0 +1,72 @@
+---
+title: Comparing USDA Farmer's Market Data with County Income Level💹🥦
+date: '2022-05-01'
+tags: ['sql', 'data', 'statistics']
+draft: false
+summary: ''
+---
+
+This is the [farmers market and county dataset](https://www.kaggle.com/datasets/madeleineferguson/farmers-markets-in-the-united-states?select=farmers_markets_from_usda.csv)
+this I found on kaggle.
+
+We will be reusing this average household income per household statistuc later, so it will be best to 
+store this in a [Common Table Expression (CTE)](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-ver15) 
+using the ```with``` keyword.
+
+The first thing I will try to accomplish will be to compare the mean household income of all counties in the United states to the
+mean household income of all counties that contain farmer's markets. The first query I created to look at this had some issues
+```
+SELECT FORMAt(AVG(median_family_income), 'C') AS average_family_income, 
+( 
+	SELECT FORMAT(AVG(median_family_income), 'C') AS mean
+	FROM wiki_county_info
+) AS overall_average
+FROM fm
+LEFT JOIN wiki_county_info
+ON fm.county = wiki_county_info.county AND fm.state = wiki_county_info.state;
+```
+
+## Which states have the most farmer's markets?
+This query returns the total number of farmer's markets per state. Unsurprisingly, California is first. However, it also has the most people
+so this tells us very little.
+```
+WITH states_by_total_market (state, total_markets) AS (
+SELECT wiki_county_info.state, COUNT(*) total_markets 
+FROM wiki_county_info
+LEFT JOIN fm
+ON wiki_county_info.county = fm.county
+	AND wiki_county_info.state = fm.state
+GROUP BY wiki_county_info.state)
+
+SELECT state, total_markets
+FROM states_by_total_market
+ORDER BY total_markets DESC;
+```
+```
+state	total_markets
+California	737
+New York	584
+Texas	404
+Illinois	358
+Michigan	342
+```
+
+## Which counties do not have farmer's markets, and which states have the most counties with no farmer's markets?
+With this query, we can see which states have the greatest number of counties without farmers markets. 
+```
+SELECT 
+	COUNT(*) AS counties_without_market, 
+	wiki_county_info.state AS state
+FROM wiki_county_info
+LEFT JOIN fm
+ON wiki_county_info.county = fm.county
+	AND wiki_county_info.state = fm.state
+WHERE fm.marketName IS NULL
+GROUP BY wiki_county_info.state
+ORDER BY counties_without_market DESC;
+```
+Texas is highest with 174. But does Texas also have a greater number of counties?
+
+Next we will look at which counties have the most farmer's markets
+
+Which characteristic correlates the most with the income of the county that the farmer's market is in?
