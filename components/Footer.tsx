@@ -12,7 +12,9 @@ export default function Footer() {
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
         </div>
         <Link href="https://github.com/JohnMFrench/tailwind-next-blog">
-          <p className="bg-white bg-opacity-60 p-1 mb-1 rounded-md text-2xl text-rust">See how I created this site</p>
+          <p className="mb-1 rounded-md bg-white bg-opacity-60 p-1 text-2xl text-rust">
+            See how I created this site
+          </p>
         </Link>
         <div className="text-md mb-2 flex space-x-2 text-white">
           <div>{siteMetadata.author}</div>

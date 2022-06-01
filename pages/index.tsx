@@ -1,13 +1,12 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
+//import formatDate from '@/lib/utils/formatDate'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Image from 'next/image'
 import { PostFrontMatter } from 'types/PostFrontMatter'
-import NewsletterForm from '@/components/NewsletterForm'
+//import NewsletterForm from '@/components/NewsletterForm'
 
 const MAX_DISPLAY = 5
 
