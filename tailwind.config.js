@@ -33,6 +33,7 @@ module.exports = {
       },
       colors: {
         'opal': '#89C0C2',
+        'rust': '#de9242',
         primary: colors.orange,
         //@ts-ignore
         gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3

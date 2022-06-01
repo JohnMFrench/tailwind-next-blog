@@ -2,7 +2,8 @@ const siteMetadata = {
   title: 'Portfolio Site of John French',
   author: 'John French',
   //headerTitle: '',
-  description: 'I have created this site to showcase my work as I pursue a career as a data analyst.',
+  description: 'I enjoy solving complex problems using data.',
+  sub_description: 'I am currently looking for a position as a data analyst. Feel free to check out my resume, see my work, or connect on any of the links below.',
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://johnfrench.vercel.app',
