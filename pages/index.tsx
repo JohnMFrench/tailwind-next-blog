@@ -21,12 +21,12 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y·divide-gray-200·bg-white">
-        <h1 className="title-font m-2 text-4xl font-medium md:text-6xl md:tracking-wide">
+        <h1 className="title-font m-1 text-4xl font-bold md:m-1 md:mr-4 md:border-l-8 md:border-l-rust md:pl-4 md:text-6xl md:font-medium md:tracking-wide">
           Hi, my name is John
           <br className="hidden lg:inline-block" />
         </h1>
-        <div className="container mx-auto flex flex-col items-center px-5 py-16 md:flex-row">
-          <div className="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
+        <div className="container mx-auto flex flex-col items-center px-5 py-8 md:flex-row md:py-16">
+          <div className="mb-81 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
             <p className="mb-8 text-2xl">{siteMetadata.description}</p>
             <p className="mb-8 text-2xl">{siteMetadata.sub_description}</p>
             <div className="flex justify-center">
