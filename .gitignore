@@ -36,3 +36,4 @@ yarn-error.log*
 .env.production.local
 .env.example
 jsconfig.json
+public/static/csv/reworked interview prep.csv
