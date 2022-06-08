@@ -15,7 +15,7 @@ interface Props {
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between bg-white">
+      <div className="flex h-fit flex-col justify-between bg-white">
         <header className="flex items-center justify-between border-b-4 border-opal py-5">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>

@@ -90,14 +90,14 @@ export default function FlashCards(props) {
         title={`FlashCards - ${siteMetadata.author}`}
         description={siteMetadata.description}
       />
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+      <div className="space-y-2 pl-2 pt-6 pb-8 md:space-y-5">
         {/* PAGE TITLE */}
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           Data Analytics Interview Prep
         </h1>
         <h2 className="text-2xl font-bold">Interactive flash cards</h2>
+        <em className="pt-1">Tap or click to flip cards</em>
       </div>
-      <div className="container min-h-full">
         <div className="flex">
           {/* New Question Button */}
           <button
@@ -122,12 +122,11 @@ export default function FlashCards(props) {
           onKeyDown={toggleCard}
           role="button"
           tabIndex={0}
-          className="m-4 flex max-h-full w-10/12 items-center border-4 border-rust pt-24 pb-24 text-center align-baseline text-xl hover:cursor-pointer md:min-h-fit md:border-4 md:text-2xl"
+          className="m-4 flex  max-h-full w-10/12 items-center border-4 border-rust pt-24 pb-24 text-center align-baseline text-xl hover:cursor-pointer md:min-h-fit md:border-4 md:text-2xl"
         >
           <p id="flash-card-q" className="pl-2 pr-2">
             {qShowing ? activeCard.question : activeCard.response}
           </p>
-        </div>
       </div>
     </>
   )
