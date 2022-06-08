@@ -98,35 +98,35 @@ export default function FlashCards(props) {
         <h2 className="text-2xl font-bold">Interactive flash cards</h2>
         <em className="pt-1">Tap or click to flip cards</em>
       </div>
-        <div className="flex">
-          {/* New Question Button */}
-          <button
-            className="text-l text-bold m-2 mb-2 rounded-md border-4 border-rust p-2 md:text-xl"
-            onClick={newQuestion}
-            onKeyDown={newQuestion}
-            role="switch"
-          >
-            New Question →
-          </button>
-          {/* Difficulty Label */}
-          <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">
-            {activeCard.difficulty}
-          </label>
-          {/* Topic Label */}
-          <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">{activeCard.topic}</label>
-        </div>
-        {/* Flash Card */}
-        <div
-          id="flash-card"
-          onClick={toggleCard}
-          onKeyDown={toggleCard}
-          role="button"
-          tabIndex={0}
-          className="m-4 flex  max-h-full w-10/12 items-center border-4 border-rust pt-24 pb-24 text-center align-baseline text-xl hover:cursor-pointer md:min-h-fit md:border-4 md:text-2xl"
+      <div className="flex">
+        {/* New Question Button */}
+        <button
+          className="text-l text-bold m-2 mb-2 rounded-md border-4 border-rust p-2 md:text-xl"
+          onClick={newQuestion}
+          onKeyDown={newQuestion}
+          role="switch"
         >
-          <p id="flash-card-q" className="pl-2 pr-2">
-            {qShowing ? activeCard.question : activeCard.response}
-          </p>
+          New Question →
+        </button>
+        {/* Difficulty Label */}
+        <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">
+          {activeCard.difficulty}
+        </label>
+        {/* Topic Label */}
+        <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">{activeCard.topic}</label>
+      </div>
+      {/* Flash Card */}
+      <div
+        id="flash-card"
+        onClick={toggleCard}
+        onKeyDown={toggleCard}
+        role="button"
+        tabIndex={0}
+        className="m-4 flex  max-h-full w-10/12 items-center border-4 border-rust pt-24 pb-24 text-center align-baseline text-xl hover:cursor-pointer md:min-h-fit md:border-4 md:text-2xl"
+      >
+        <p id="flash-card-q" className="pl-2 pr-2">
+          {qShowing ? activeCard.question : activeCard.response}
+        </p>
       </div>
     </>
   )
