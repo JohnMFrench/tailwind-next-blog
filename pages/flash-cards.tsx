@@ -17,7 +17,7 @@ type Question = {
   topic: string
 }
 
-export async function getServerSideProps({ req, res }) {
+export async function getStaticProps({ req, res }) {
   console.log('GETTING SERVER SIDE PROPS')
   //let file = fs.createReadStream('./../data/na-interview-prep.csv')
   try {
@@ -98,21 +98,23 @@ export default function FlashCards(props) {
         <h2 className="text-2xl font-bold">Interactive flash cards</h2>
       </div>
       <div className="container min-h-full">
-        {/* New Question Button */}
-        <button
-          className="text-l text-bold m-2 mb-2 rounded-md border-4 border-rust p-2 md:text-xl"
-          onClick={newQuestion}
-          onKeyDown={newQuestion}
-          role="switch"
-        >
-          New Question →
-        </button>
-        {/* Difficulty Label */}
-        <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">
-          {activeCard.difficulty}
-        </label>
-        {/* Topic Label */}
-        <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">{activeCard.topic}</label>
+        <div className="flex">
+          {/* New Question Button */}
+          <button
+            className="text-l text-bold m-2 mb-2 rounded-md border-4 border-rust p-2 md:text-xl"
+            onClick={newQuestion}
+            onKeyDown={newQuestion}
+            role="switch"
+          >
+            New Question →
+          </button>
+          {/* Difficulty Label */}
+          <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">
+            {activeCard.difficulty}
+          </label>
+          {/* Topic Label */}
+          <label className="text-bold ml-2 mb-2 border-2 border-opal p-2">{activeCard.topic}</label>
+        </div>
         {/* Flash Card */}
         <div
           id="flash-card"
