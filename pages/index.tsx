@@ -72,7 +72,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               width="600px"
               height="600px"
               alt="person using laptop"
-              src="/static/images/e-learning/e-learning.png"
+              src="/static/images/e-learning/E-learning.png"
             />
           </div>
         </div>

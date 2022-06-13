@@ -18,15 +18,15 @@ export default function Projects() {
           </h1>
         </div>
         <div className="grid-cols-1 space-y-4">
-          <div className="text text-3xl text-rust underline underline-offset-1 hover:text-opal">
+          <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
             <Link href="/flash-cards">Data Analytics Flash Cards</Link>
           </div>
-          <div className="text text-3xl text-rust underline  underline-offset-1 hover:text-opal">
+          <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
             <Link href="https://github.com/JohnMFrench/indeed-scraper/blob/main/scrape.ipynb">
               Scraping Data from Indeed.com
             </Link>
           </div>
-          <div className="text text-3xl text-rust underline  underline-offset-1 hover:text-opal">
+          <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
             <Link href="https://www.loom.com/share/1d10cb6b862a4aa992ca908e69bb78ac">
               Indiana Covid Rates by County per Capita Income with Tableau
             </Link>

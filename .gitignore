@@ -14,6 +14,9 @@
 public/sitemap.xml
 .vercel
 
+#api (unused)
+/pages/api
+
 # production
 /build
 *.xml
