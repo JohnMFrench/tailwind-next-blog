@@ -82,6 +82,7 @@ export default function FlashCards(props) {
     const i = getRandomInt(0, props.cards.length)
     setQShowing(true)
     setActiveCard(props.cards[i])
+    console.log(`length of ${props.cards.length}`)
   }
 
   return (
