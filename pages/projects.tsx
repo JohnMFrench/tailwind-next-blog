@@ -19,16 +19,21 @@ export default function Projects() {
         </div>
         <div className="grid-cols-1 space-y-4">
           <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
-            <Link href="/flash-cards">Data Analytics Flash Cards</Link>
+            <Link href="/flash-cards">Data Analytics Flash Cards (App)</Link>
           </div>
           <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
             <Link href="https://github.com/JohnMFrench/indeed-scraper/blob/main/scrape.ipynb">
-              Scraping Data from Indeed.com
+              Scraping Data from Indeed.com (.pynb)
             </Link>
           </div>
           <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
-            <Link href="https://www.loom.com/share/1d10cb6b862a4aa992ca908e69bb78ac">
-              Indiana Covid Rates by County per Capita Income with Tableau
+            <Link href="https://www.loom.com/share/43062e8f91db4b5aada8e5f3afdf5ed7">
+              Scraping Data from Indeed.com (Video)
+            </Link>
+          </div>
+          <div className="text text-xl text-rust underline underline-offset-1 hover:text-opal md:text-3xl">
+            <Link href="https://www.loom.com/share/43062e8f91db4b5aada8e5f3afdf5ed7">
+              Indiana Covid Rates by County per Capita Income with Tableau (Video)
             </Link>
           </div>
         </div>

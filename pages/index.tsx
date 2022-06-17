@@ -38,7 +38,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </h1>
           <span className="p-2md:border-b-8 border-rust md:border-r-8">
             <Image
-              className="border-1 content-end rounded-full object-cover object-center md:min-h-full"
+              className="min-h-full·content-end·rounded-full·object-cover·object-center"
               width="300px"
               height="300px"
               alt="person using laptop"
